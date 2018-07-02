@@ -1,0 +1,7 @@
+rest-app-file-system:
+    drive-name: "AFS server"
+    url-address: http://afs-server:8080
+
+local-app-file-system:
+    drive-name: Local
+    root-dir: /

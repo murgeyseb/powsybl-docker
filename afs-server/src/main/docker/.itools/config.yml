@@ -1,0 +1,9 @@
+mapdb-app-file-system:
+    drive-name: Projects
+    db-file: $HOME/powsybl.db
+    remotely-accessible: true
+
+local-app-file-system:
+    drive-name: Distant
+    root-dir: /
+    remotely-accessible: true

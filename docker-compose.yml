@@ -1,0 +1,17 @@
+version: "2"
+services:
+  afs-server:
+    image: powsybl/afs-server:1.0.0-SNAPSHOT
+    container_name: afs-server
+    ports:
+      - "8080:8080"
+  gse-app:
+    image: powsybl/gse-app:1.0.0-SNAPSHOT
+    container_name: gse-app
+    links:
+      - afs-server
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    privileged: true
